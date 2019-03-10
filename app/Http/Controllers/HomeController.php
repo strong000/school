@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Teacher;
+
 class HomeController extends Controller
 {
     /**
@@ -23,6 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $data_counts = [
+            'teacher' => Teacher::count()
+        ];
         return view('dashboard', compact('data_counts'));
     }
 }
