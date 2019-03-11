@@ -27,7 +27,7 @@
                                     <h4>Total Student</h4>
                                 </div>
                                 <div class="stats-icon pull-right">
-                                    <i class="educate-icon educate-professor"></i>
+                                    <i class="educate-icon educate-student icon-wrap"></i>
                                 </div>
                                 <div class="m-t-xl widget-cl-2">
                                     <h1 class="text-info"></h1>
@@ -42,7 +42,7 @@
                                     <h4>Total Teacher</h4>
                                 </div>
                                 <div class="stats-icon pull-right">
-                                    <i class="educate-icon educate-department"></i>
+                                    <i class="educate-icon educate-professor icon-wrap"></i>
                                 </div>
                                 <div class="m-t-xl widget-cl-3">
                                     <h1 class="text-warning">{{ $data_counts['teacher'] }}</h1>

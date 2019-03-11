@@ -88,7 +88,10 @@
                                 </a>
                         
                         <li>
-                            <a title="Landing Page" href="{{ route('teacher_index') }}" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Teacher</span></a>
+                            <a title="Teacher Page" href="{{ route('teacher_index') }}" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap" aria-hidden="true"></span> <span class="mini-click-non">Teacher</span></a>
+                        </li>
+                        <li>
+                            <a title="Class Page" href="{{ route('classroom_index') }}" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Class</span></a>
                         </li>
                         <li>
                             <a href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Students</span></a>
@@ -141,7 +144,7 @@
                                                             <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                                                         </a>
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                        <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
+                                                        <li><a href="{{ route('user_index') }}"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
                                                         </li>
                                                         <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
                                                         </li>
@@ -149,8 +152,17 @@
                                                         </li>
                                                         <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
                                                         </li>
-                                                        <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
+                                                        <li><a href="{{ route('logout') }}"
+
+                                                            onclick="event.preventDefault();                                                 
+                                                            document.getElementById('logout-form').submit();">
+
+                                                        <span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
                                                         </li>
+
+                                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                            @csrf
+                                                        </form>
                                                     </ul>
                                                 </li>
                                             </ul>
